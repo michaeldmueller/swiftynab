@@ -39,13 +39,14 @@ class Client {
                 return
             }
             
+            print("http url: \(httpURLResponse)")
+            print("data: \(data)")
+            
             do {
                 if self.isHTTPError(response: httpURLResponse) {
                     let serializedResponse = try Serializer.decode(ErrorResponse.self, from: data)
                     completion(nil, serializedResponse.error)
                 } else {
-                    let json = try JSONSerialization.data(withJSONObject: data, options: [])
-                    print("json: \(json)")
                     let serializedResponse = try Serializer.decode(T.self, from: data)
                     completion(serializedResponse, nil)
                 }
