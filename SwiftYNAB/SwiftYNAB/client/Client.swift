@@ -43,6 +43,14 @@ class Client {
             print("data: \(data)")
             
             do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
+                    print("Json: \(json)")
+                }
+            } catch {
+                print("Serialization error!!!!!!")
+            }
+            
+            do {
                 if self.isHTTPError(response: httpURLResponse) {
                     let serializedResponse = try Serializer.decode(ErrorResponse.self, from: data)
                     completion(nil, serializedResponse.error)
