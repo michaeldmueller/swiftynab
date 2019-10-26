@@ -24,10 +24,10 @@ public struct Category: Codable {
     public let hidden: Bool
     
     /// Original category group id
-//    public let originaCategoryGroupId: String?
+    public let originaCategoryGroupId: String?
     
     /// Category note
-//    public let note: String?
+    public let note: String?
     
     /// Amount budgeted to this category
     public let budgeted: Int
@@ -39,19 +39,19 @@ public struct Category: Codable {
     public let balance: Int
     
     /// Type of goal associated with this category
-//    public let goal_type: String?
+    public let goal_type: String?
     
     /// Goal creation month
-//    public let goalCreationMonth: String?
+    public let goalCreationMonth: String?
     
     /// Goal target amount
-//    public let goalTarget: Int
+    public let goalTarget: Int
     
     /// Goal target date
-//    public let goalTargetMonth: String?
+    public let goalTargetMonth: String?
     
     /// Goal percentage complete
-//    public let goal_percentage_complete: Int?
+    public let goal_percentage_complete: Int?
     
     /// Whether or not the goal is deleted
     public let deleted: Bool
