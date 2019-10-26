@@ -44,6 +44,8 @@ class Client {
                     let serializedResponse = try Serializer.decode(ErrorResponse.self, from: data)
                     completion(nil, serializedResponse.error)
                 } else {
+                    let json = JSONSerialization.data(withJSONObject: data, options: nil)
+                    print("json: \(json)")
                     let serializedResponse = try Serializer.decode(T.self, from: data)
                     completion(serializedResponse, nil)
                 }
