@@ -27,9 +27,9 @@ public struct BudgetSummary: Codable {
     public let lastMonth: String
     
     /// Date formatting settings
-//    public let dateFormat: String?
+    public let dateFormat: DateFormat?
     
     /// Currency formatting settings
-//    public let currencyFormat: String?
+    public let currencyFormat: CurrencyFormat?
     
 }
