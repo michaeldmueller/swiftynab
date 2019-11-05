@@ -12,27 +12,27 @@ import Foundation
 public struct CurrencyFormat: Codable {
     
     /// ISO code
-    public let isoCode: String
+    public var isoCode: String
     
     /// Example currency format
-    public let exampleFormat: String
+    public var exampleFormat: String
     
     /// Decimal digits to show
-    public let decimalDigits: Int
+    public var decimalDigits: Int
     
     /// Decimal separator
-    public let decimalSeparator: String
+    public var decimalSeparator: String
     
     /// Placement of currency symbol
-    public let symbolFirst: Bool
+    public var symbolFirst: Bool
     
     /// Group separator
-    public let groupSeparator: String
+    public var groupSeparator: String
     
     /// Currency symbol
-    public let currencySymbol: String
+    public var currencySymbol: String
     
     /// Whether or not to display the currency symbol
-    public let displaySymbol: Bool
+    public var displaySymbol: Bool
     
 }
