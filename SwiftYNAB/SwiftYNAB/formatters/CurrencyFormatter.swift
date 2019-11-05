@@ -11,8 +11,8 @@ import Foundation
 /// Converts currency data from API responses into displayeable strings
 public class CurrencyFormatter {
     
-    private let numberFormatter: NumberFormatter
-    private let currencyFormat: CurrencyFormat
+    public var numberFormatter: NumberFormatter
+    public var currencyFormat: CurrencyFormat
     
     /**
      Initializes the formatter using format information from a budget
