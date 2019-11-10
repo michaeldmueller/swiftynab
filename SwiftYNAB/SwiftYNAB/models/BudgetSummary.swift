@@ -18,13 +18,13 @@ public struct BudgetSummary: Codable {
     public let name: String
     
     /// Date the budget was last modified
-    public let lastModifiedOn: String
+    public let lastModifiedOn: String?
     
     /// Budget's first month
-    public let firstMonth: String
+    public let firstMonth: String?
     
     /// Budget's last month
-    public let lastMonth: String
+    public let lastMonth: String?
     
     /// Date formatting settings
     public let dateFormat: DateFormat?
